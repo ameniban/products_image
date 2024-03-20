@@ -1,4 +1,6 @@
-This project extracts product data from a website and stores it in a database.
+This project extracts product data from a website and stores it in a database: 
+
+
 Data Extraction : 
 1. technicaltest.py: Python script that scrapes product data from the target URL (https://www.pascalcoste-shopping.com/esthetique/fond-de-teint.html) and extracting it into the json file "products.json".
 
