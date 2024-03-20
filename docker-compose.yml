@@ -1,0 +1,17 @@
+services:
+  pythonapp:
+    build: ./python/
+    command: sh -c "sleep 10s ; python3 /usr/app/src/products.py"
+    depends_on:
+      - mysql
+    volumes:
+      - ./python:/usr/app/src 
+
+  mysql:
+    build: ./mysql/
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:33006'
